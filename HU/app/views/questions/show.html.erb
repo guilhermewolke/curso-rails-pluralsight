@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="lead well">
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="<%=@question.gravatar %>" alt="<%=@question.answer %>">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"><%=@question.email %></h4>
+                <%=@question.answer %>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sml-8 col-sm-offset-2">
+            <div>
+                <a href="#" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myAnswer">
+                    Nova Resposta
+                </a>
+            </div>
+            <%= render 'home/new_answer_form' %>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Media heading</h4>
+                    ashalambababooooooom
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Media heading</h4>
+                    ashalambababooooooom
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Media heading</h4>
+                    ashalambababooooooom
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

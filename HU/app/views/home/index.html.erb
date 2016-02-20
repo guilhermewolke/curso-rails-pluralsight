@@ -1,66 +1,24 @@
 <h1>Welcome</h1>
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="..." alt="Mosquita">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Mosquita</h4>
-    Como combater a mosquita?
-    <div>
-        <a href="/question/12" class="btn btn-success btn-xs">
-            Ver respostas
-        </a>
+<div class="container">
+  <% @questions.each do |q| %>
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="<%=q.gravatar %>" alt="<%=q.answer %>">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><%=q.email %></h4>
+      <div>
+        <%=time_ago_in_words q.created_at %>
+      </div>
+      <%=q.answer %>
+      <div>
+          <a href="<%=question_path(q) %>" class="btn btn-success btn-xs">
+              Ver respostas
+          </a>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="..." alt="Estocar Vento">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Estocar Vento</h4>
-    Como estocar vento?
-    <div>
-        <a href="/question/12" class="btn btn-success btn-xs">
-            Ver respostas
-        </a>
-    </div>
-  </div>
-</div>
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="..." alt="Porquê foi pra Boston?">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Porquê foi pra Boston?</h4>
-    É verdade que você foi de Zurich pra Boston pq a terra é assim?
-    <div>
-        <a href="/question/12" class="btn btn-success btn-xs">
-            Ver respostas
-        </a>
-    </div>
-  </div>
-</div>
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="..." alt="Podia ou não podia?">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Podia ou não podia?</h4>
-    É verdade que tem vez que ele podia e eu não podia, e que eu podia mas ele não podia, e que nem eu podia nem ele podia?
-    <div>
-        <a href="/question/12" class="btn btn-success btn-xs">
-            Ver respostas
-        </a>
-    </div>
-  </div>
+  <% end %>
 </div>
